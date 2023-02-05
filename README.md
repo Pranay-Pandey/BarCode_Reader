@@ -48,8 +48,16 @@
   </table>
 <br>
 The rest of the results can be found in the Output Folder.
-
-
+ <h2>Solution Procedure:</h2>
+    <p>The following steps are performed in the solution:</p>
+    <ul>
+      <li>The image is loaded.</li>
+      <li>Yolo Object detection is applied on the image and all the objects present in the image are identified.</li>
+      <li>The identified objects are cropped and passed to the Fine object getter method which uses clustering of corners present in the image to identify individual items.</li>
+      <li>The cropped images of individual items are processed to detect barcode present in them. For barcode detection Pyzbar and Dynamsoft barcode reader libraries are used.</li>
+      <li>The images are coloured accordingly to indicate successful barcode detection or not.</li>
+      <li>Finally, Barcode detection is applied directly on the whole image to see if there is any left out barcode.</li>
+</ul>
 <h2>Running the Code</h2>
 <h3>From Python</h3>
 <p>The main code for barcode identification is present in the file <strong>main.py</strong>. To run the code from python, follow the instructions below:</p>
